@@ -1,0 +1,160 @@
+{
+ "app": "v1.39.11",
+ "units": [
+  {
+   "id": "base",
+   "shape": "dict",
+   "file": "i18n-D8FeJ7Id.js",
+   "start": 171,
+   "end": 212690,
+   "en": "units/base.en.json",
+   "ru": "units/base.ru.json"
+  },
+  {
+   "id": "heartbeat",
+   "shape": "dict",
+   "file": "HeartbeatPanel-DP13p7sd.js",
+   "start": 4105,
+   "end": 7802,
+   "en": "units/heartbeat.en.json",
+   "ru": "units/heartbeat.ru.json"
+  },
+  {
+   "id": "providerui",
+   "shape": "dict-partial",
+   "file": "SettingsPanelEntry-CU88R56X.js",
+   "start": 14587,
+   "end": 18484,
+   "en": "units/providerui.en.json",
+   "ru": "units/providerui.ru.json",
+   "functions": []
+  },
+  {
+   "id": "browser",
+   "shape": "dict-partial",
+   "file": "BrowserPanelEntry-DiAcbxXK.js",
+   "start": 1729,
+   "end": 2581,
+   "en": "units/browser.en.json",
+   "ru": "units/browser.ru.json",
+   "functions": [
+    {
+     "key": "closeTab",
+     "source": "e=>`Close ${e}`"
+    },
+    {
+     "key": "zoomReset",
+     "source": "e=>`Reset zoom (${e}%)`"
+    },
+    {
+     "key": "errorDetail",
+     "source": "(e,t)=>`${t} (${e})`"
+    },
+    {
+     "key": "downloadState",
+     "source": "[object Object]"
+    },
+    {
+     "key": "actionFailed",
+     "source": "e=>`Browser: ${e}`"
+    }
+   ]
+  },
+  {
+   "id": "inbox_queue",
+   "shape": "dict-partial",
+   "file": "ComposerInboxQueue-Bgml-UlG.js",
+   "start": 51009,
+   "end": 52926,
+   "en": "units/inbox_queue.en.json",
+   "ru": "units/inbox_queue.ru.json",
+   "functions": []
+  },
+  {
+   "id": "auth",
+   "shape": "dict-partial",
+   "file": "AuthenticationRecoveryActions-B_95jtgd.js",
+   "start": 227,
+   "end": 531,
+   "en": "units/auth.en.json",
+   "ru": "units/auth.ru.json",
+   "functions": []
+  },
+  {
+   "id": "guidance",
+   "shape": "array",
+   "file": "ComposerGuidanceShelf-CxFra7BH.js",
+   "start": 523,
+   "end": 668,
+   "en": "units/guidance.en.json",
+   "ru": "units/guidance.ru.json"
+  },
+  {
+   "id": "diag0",
+   "shape": "dict-partial",
+   "file": "DiagnosticsSettingsPage-B8WuQNCw.js",
+   "start": 11919,
+   "end": 12283,
+   "en": "units/diag0.en.json",
+   "ru": "units/diag0.ru.json",
+   "functions": [
+    {
+     "key": "recording",
+     "source": "(e,s)=>`Recording - ${e}s - ${s} events`"
+    },
+    {
+     "key": "ready",
+     "source": "e=>`Trace ready - ${e} events`"
+    }
+   ]
+  },
+  {
+   "id": "diag1",
+   "shape": "dict-partial",
+   "file": "DiagnosticsSettingsPage-B8WuQNCw.js",
+   "start": 16015,
+   "end": 16318,
+   "en": "units/diag1.en.json",
+   "ru": "units/diag1.ru.json",
+   "functions": []
+  },
+  {
+   "id": "diag2",
+   "shape": "dict-partial",
+   "file": "DiagnosticsSettingsPage-B8WuQNCw.js",
+   "start": 16533,
+   "end": 16651,
+   "en": "units/diag2.en.json",
+   "ru": "units/diag2.ru.json",
+   "functions": []
+  },
+  {
+   "id": "inbox_index",
+   "shape": "array",
+   "file": "index-BmOq5R78.js",
+   "start": 36627,
+   "end": 37552,
+   "en": "units/inbox_index.en.json",
+   "ru": "units/inbox_index.ru.json"
+  },
+  {
+   "id": "usage",
+   "shape": "dict-partial",
+   "file": "UsageStatsPanel-C3e_VmW-.js",
+   "start": 1700,
+   "end": 3410,
+   "en": "units/usage.en.json",
+   "ru": "units/usage.ru.json",
+   "functions": []
+  },
+  {
+   "id": "management",
+   "shape": "management",
+   "file": "managementLocale-8zPxf_0j.js",
+   "start": 149,
+   "end": 5766,
+   "en": "units/management.en.json",
+   "ru": "units/management.ru.json"
+  }
+ ]
+}

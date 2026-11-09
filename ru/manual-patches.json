@@ -1,0 +1,730 @@
+[
+ {
+  "file": "i18n-*.js",
+  "find": "\"zh\"===l?\"zh-CN\":\"zh-TW\"===l?\"zh-TW\":\"en\"",
+  "replace": "\"zh\"===l?\"zh-CN\":\"zh-TW\"===l?\"zh-TW\":\"ru\"",
+  "note": "document.documentElement.lang"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "function localeTag(){return\"zh\"===j()?\"zh-CN\":j()}",
+  "replace": "function localeTag(){return\"zh\"===j()?\"zh-CN\":\"ru-RU\"}",
+  "note": "exactTokens number format"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "\"en\"===n?\"Back to automation\"",
+  "replace": "\"en\"===n?\"Вернуться к автоматизации\"",
+  "note": "automation return label"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "\"引导当前轮\":\"Guide current turn\"",
+  "replace": "\"引导当前轮\":\"Указать для текущего хода\"",
+  "note": "composer steer button"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "`${n}h ${String(s).padStart(2,\"0\")}m ${String(r).padStart(2,\"0\")}s`",
+  "replace": "`${n} ч ${String(s).padStart(2,\"0\")} мин ${String(r).padStart(2,\"0\")} с`",
+  "note": "run duration h/m/s"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "`${s}m ${String(r).padStart(2,\"0\")}s`",
+  "replace": "`${s} мин ${String(r).padStart(2,\"0\")} с`",
+  "note": "run duration m/s"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": ":o?`${r}秒`:`${r}s`}",
+  "replace": ":o?`${r}秒`:`${r} с`}",
+  "note": "run duration s"
+ },
+ {
+  "file": "AppRuntimeView-*.js",
+  "find": "new Intl.NumberFormat(n.locale,{style:\"currency\"",
+  "replace": "new Intl.NumberFormat(\"en\"===(n.locale||\"en\")?\"ru-RU\":n.locale,{style:\"currency\"",
+  "note": "localized currency formatting"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "\"zh-TW\"===n?\"zh-TW\":\"en\",r=new Intl.RelativeTimeFormat",
+  "replace": "\"zh-TW\"===n?\"zh-TW\":\"ru-RU\",r=new Intl.RelativeTimeFormat",
+  "note": "relative time locale"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "\"zh-TW\"===t?\"zh-TW\":\"en\";return new Date(e).toLocaleDateString(r)",
+  "replace": "\"zh-TW\"===t?\"zh-TW\":\"ru-RU\";return new Date(e).toLocaleDateString(r)",
+  "note": "date label locale"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${e}m`}if(o<c)",
+  "replace": "`${e} мин`}if(o<c)",
+  "note": "short duration minutes"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${e}h`}if(o<7*c)",
+  "replace": "`${e} ч`}if(o<7*c)",
+  "note": "short duration hours"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${e}d`}if(o<a)",
+  "replace": "`${e} дн`}if(o<a)",
+  "note": "short duration days"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${e}d`}if(o<l)",
+  "replace": "`${e} дн`}if(o<l)",
+  "note": "short duration days (week branch)"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${e}mo`}",
+  "replace": "`${e} мес`}",
+  "note": "short duration months"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "`${d}y`}",
+  "replace": "`${d} л`}",
+  "note": "short duration years"
+ },
+ {
+  "file": "ContextPanel-*.js",
+  "find": "return\"zh\"===e?\"zh-CN\":\"zh-TW\"===e?\"zh-TW\":\"en\"}(t)",
+  "replace": "return\"zh\"===e?\"zh-CN\":\"zh-TW\"===e?\"zh-TW\":\"ru-RU\"}(t)",
+  "note": "metric token number format"
+ },
+ {
+  "file": "UsageStatsPanel-*.js",
+  "find": "const e=\"zh\"===s?\"zh-CN\":s;",
+  "replace": "const e=\"zh\"===s?\"zh-CN\":\"zh-TW\"===s?\"zh-TW\":\"ru-RU\";",
+  "note": "usage token number format"
+ },
+ {
+  "file": "UsageStatsPanel-*.js",
+  "find": "t.tokens.toLocaleString(\"en-US\")",
+  "replace": "t.tokens.toLocaleString(\"ru-RU\")",
+  "note": "usage stat number"
+ },
+ {
+  "file": "SettingsPanelEntry-*.js",
+  "find": "new Intl.NumberFormat(\"en\",{notation:\"compact\",maximumFractionDigits:1})",
+  "replace": "new Intl.NumberFormat(\"ru-RU\",{notation:\"compact\",maximumFractionDigits:1})",
+  "note": "provider context badge number"
+ },
+ {
+  "file": "TrashPage-*.js",
+  "find": "new Date(e.updatedAt).toLocaleDateString(o())",
+  "replace": "new Date(e.updatedAt).toLocaleDateString(\"ru-RU\")",
+  "note": "trash date"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "??\"Browser\"",
+  "replace": "??\"Браузер\"",
+  "note": "browser dock tab label (без служебных имён)"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "{queued:\"Waiting for browser\",preparing:\"Preparing page\",reading:\"AI is reading\",interacting:\"AI is interacting\",capturing:\"AI is capturing\",picking:\"Select an element; Esc to exit\",completed:\"Browser operation completed\"}",
+  "replace": "{queued:\"Ожидание браузера\",preparing:\"Подготовка страницы\",reading:\"ИИ читает\",interacting:\"ИИ взаимодействует\",capturing:\"ИИ делает снимок\",picking:\"Выберите элемент; Esc — выход\",completed:\"Операция в браузере завершена\"}",
+  "note": "browser operation status"
+ },
+ {
+  "file": "DiagnosticsSettingsPage-*.js",
+  "find": "(e,s)=>`Recording - ${e}s - ${s} events`",
+  "replace": "(e,s)=>`Запись — ${e} с — ${s} событий`",
+  "note": "recorder label"
+ },
+ {
+  "file": "DiagnosticsSettingsPage-*.js",
+  "find": "e=>`Trace ready - ${e} events`",
+  "replace": "e=>`Запись готова — ${e} событий`",
+  "note": "recorder ready label"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "e=>`Close ${e}`",
+  "replace": "e=>`Закрыть ${e}`",
+  "note": "browser close tab title"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "e=>`Reset zoom (${e}%)`",
+  "replace": "e=>`Сбросить масштаб (${e}%)`",
+  "note": "browser zoom reset title"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "e=>`Browser: ${e}`",
+  "replace": "e=>`Браузер: ${e}`",
+  "note": "browser action failure prefix"
+ },
+ {
+  "file": "providerCatalog.generated-*.js",
+  "find": " API. Fetch or edit models for your account after connecting.",
+  "replace": " API. После подключения получите или добавьте модели для своей учётной записи.",
+  "mode": "all",
+  "note": "provider catalog descriptions"
+ },
+ {
+  "file": "index.html",
+  "subdir": "",
+  "find": "<html lang=\"en\"",
+  "replace": "<html lang=\"ru\"",
+  "note": "document language"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"响应式\":\"Responsive\"",
+  "replace": "?\"响应式\":\"Адаптивный\"",
+  "note": "locale pair: Responsive"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"重新授权并打开预览\":\"Reauthorize and reopen preview\"",
+  "replace": "?\"重新授权并打开预览\":\"Повторно авторизуйтесь и откройте предпросмотр\"",
+  "note": "locale pair: Reauthorize and reopen preview"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"请切回此页面所属的任务\":\"Return to the task that owns this page\"",
+  "replace": "?\"请切回此页面所属的任务\":\"Вернитесь к задаче, которой принадлежит эта страница\"",
+  "note": "locale pair: Return to the task that owns this page"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"当前任务暂不能接收元素附件\":\"The current task cannot receive an element attachment yet\"",
+  "replace": "?\"当前任务暂不能接收元素附件\":\"Текущая задача пока не может принять вложение-элемент\"",
+  "note": "locale pair: The current task cannot receive an eleme"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"点击元素 · Esc 退出\":\"Click an element · Esc to cancel\"",
+  "replace": "?\"点击元素 · Esc 退出\":\"Выберите элемент · Esc — отмена\"",
+  "note": "locale pair: Click an element · Esc to cancel"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"选择元素加入聊天\":\"Select element for chat\"",
+  "replace": "?\"选择元素加入聊天\":\"Выбрать элемент для чата\"",
+  "note": "locale pair: Select element for chat"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"视口预设\":\"Viewport preset\"",
+  "replace": "?\"视口预设\":\"Предустановка вьюпорта\"",
+  "note": "locale pair: Viewport preset"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"自然尺寸\":\"Natural\"",
+  "replace": "?\"自然尺寸\":\"Естественный\"",
+  "note": "locale pair: Natural"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"手机\":\"Phone\"",
+  "replace": "?\"手机\":\"Телефон\"",
+  "note": "locale pair: Phone"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"平板\":\"Tablet\"",
+  "replace": "?\"平板\":\"Планшет\"",
+  "note": "locale pair: Tablet"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"桌面\":\"Desktop\"",
+  "replace": "?\"桌面\":\"Компьютер\"",
+  "note": "locale pair: Desktop"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"自定义\":\"Custom\"",
+  "replace": "?\"自定义\":\"Другой\"",
+  "note": "locale pair: Custom"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"CSS 宽度\":\"CSS width\"",
+  "replace": "?\"CSS 宽度\":\"Ширина CSS\"",
+  "note": "locale pair: CSS width"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"CSS 高度\":\"CSS height\"",
+  "replace": "?\"CSS 高度\":\"Высота CSS\"",
+  "note": "locale pair: CSS height"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"应用\":\"Apply\"",
+  "replace": "?\"应用\":\"Применить\"",
+  "note": "locale pair: Apply"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"旋转\":\"Rotate\"",
+  "replace": "?\"旋转\":\"Повернуть\"",
+  "note": "locale pair: Rotate"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"显示比例\":\"Display scale\"",
+  "replace": "?\"显示比例\":\"Масштаб отображения\"",
+  "note": "locale pair: Display scale"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"当前宿主不支持录制\":\"Recording is unavailable\"",
+  "replace": "?\"当前宿主不支持录制\":\"Запись недоступна\"",
+  "note": "locale pair: Recording is unavailable"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"截图\":\"Screenshot\"",
+  "replace": "?\"截图\":\"Снимок экрана\"",
+  "note": "locale pair: Screenshot"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"复制路径\":\"Copy path\"",
+  "replace": "?\"复制路径\":\"Копировать путь\"",
+  "note": "locale pair: Copy path"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"关闭面板后也可通过 View 菜单或 Ctrl/⌘+Shift+R 停止录制\":\"Stop from the View menu or Ctrl/⌘+Shift+R even when this panel is closed\"",
+  "replace": "?\"关闭面板后也可通过 View 菜单或 Ctrl/⌘+Shift+R 停止录制\":\"Остановить можно из меню View или сочетанием Ctrl/⌘+Shift+R, даже когда панель закрыта\"",
+  "note": "locale pair: Stop from the View menu or Ctrl/⌘+Shift+"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"停止录制\":\"Stop recording\"",
+  "replace": "?\"停止录制\":\"Остановить запись\"",
+  "note": "locale pair: Stop recording"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"录制 · 20 秒\":\"Record · 20 s\"",
+  "replace": "?\"录制 · 20 秒\":\"Запись · 20 с\"",
+  "note": "locale pair: Record · 20 s"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"取消录制\":\"Cancel recording\"",
+  "replace": "?\"取消录制\":\"Отменить запись\"",
+  "note": "locale pair: Cancel recording"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"复制产物路径\":\"Copy artifact path\"",
+  "replace": "?\"复制产物路径\":\"Копировать путь к артефакту\"",
+  "note": "locale pair: Copy artifact path"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"诊断不可用\":\"Diagnostics unavailable\"",
+  "replace": "?\"诊断不可用\":\"Диагностика недоступна\"",
+  "note": "locale pair: Diagnostics unavailable"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"页面诊断\":\"Page diagnostics\"",
+  "replace": "?\"页面诊断\":\"Диагностика страницы\"",
+  "note": "locale pair: Page diagnostics"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"关闭诊断\":\"Close diagnostics\"",
+  "replace": "?\"关闭诊断\":\"Закрыть диагностику\"",
+  "note": "locale pair: Close diagnostics"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"显示页面\":\"Show page\"",
+  "replace": "?\"显示页面\":\"Показать страницу\"",
+  "note": "locale pair: Show page"
+ },
+ {
+  "file": "BrowserPanelEntry-*.js",
+  "find": "?\"复制诊断编号\":\"Copy diagnostic ID\"",
+  "replace": "?\"复制诊断编号\":\"Копировать ID диагностики\"",
+  "note": "locale pair: Copy diagnostic ID"
+ },
+ {
+  "file": "SettingsPanelEntry-*.js",
+  "find": "?\"中文\":\"English\"",
+  "replace": "?\"中文\":\"Русский\"",
+  "note": "locale pair: English"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":\"Preview diagram\",title:\"Preview diagram\"",
+  "replace": "\"aria-label\":\"Предпросмотр диаграммы\",title:\"Предпросмотр диаграммы\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":\"Show diagram source\",title:\"Show diagram source\"",
+  "replace": "\"aria-label\":\"Показать исходник диаграммы\",title:\"Показать исходник диаграммы\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":\"Zoom out\",title:\"Zoom out\"",
+  "replace": "\"aria-label\":\"Уменьшить\",title:\"Уменьшить\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":\"Zoom in\",title:\"Zoom in\"",
+  "replace": "\"aria-label\":\"Увеличить\",title:\"Увеличить\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":\"Reset zoom\",title:\"Reset zoom\"",
+  "replace": "\"aria-label\":\"Сбросить масштаб\",title:\"Сбросить масштаб\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "MermaidDiagram-*.js",
+  "find": "\"aria-label\":t?\"Exit fullscreen\":\"Open fullscreen\",title:t?\"Exit fullscreen\":\"Open fullscreen\"",
+  "replace": "\"aria-label\":t?\"Выйти из полноэкранного режима\":\"Открыть на весь экран\",title:t?\"Выйти из полноэкранного режима\":\"Открыть на весь экран\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "WindowsWindowControls-*.js",
+  "find": "\"aria-label\":\"Window controls\"",
+  "replace": "\"aria-label\":\"Управление окном\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "WindowsWindowControls-*.js",
+  "find": "\"aria-label\":\"Minimize window\",title:\"Minimize\"",
+  "replace": "\"aria-label\":\"Свернуть окно\",title:\"Свернуть\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "WindowsWindowControls-*.js",
+  "find": "\"aria-label\":\"Maximize or restore window\",\"aria-pressed\":o,title:o?\"Restore\":\"Maximize\"",
+  "replace": "\"aria-label\":\"Развернуть или восстановить окно\",\"aria-pressed\":o,title:o?\"Восстановить\":\"Развернуть\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "WindowsWindowControls-*.js",
+  "find": "\"aria-label\":\"Close window\",title:\"Close\"",
+  "replace": "\"aria-label\":\"Закрыть окно\",title:\"Закрыть\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "new Error(\"Task session is unavailable\")",
+  "replace": "new Error(\"Сессия задачи недоступна\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "i.idempotent?\"Already applied\":\"Task updated\"",
+  "replace": "i.idempotent?\"Уже применено\":\"Задача обновлена\"",
+  "note": "residual literal (без служебных имён)"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "?\"Collapse tasks\":\"Expand tasks\"",
+  "replace": "?\"Свернуть задачи\":\"Развернуть задачи\"",
+  "note": "residual literal (без служебных имён)"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "\"aria-label\":\"Task scope\"",
+  "replace": "\"aria-label\":\"Область задач\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "children:\"Current session\"",
+  "replace": "children:\"Текущая сессия\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "children:\"Current project\"",
+  "replace": "children:\"Текущий проект\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "children:\"All projects\"",
+  "replace": "children:\"Все проекты\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "placeholder:\"Filter tasks\",\"aria-label\":\"Filter tasks\"",
+  "replace": "placeholder:\"Фильтр задач\",\"aria-label\":\"Фильтр задач\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"Invalid saved input text\")",
+  "replace": "new Error(\"Некорректный сохранённый текст ввода\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"Invalid saved input\")",
+  "replace": "new Error(\"Некорректный сохранённый ввод\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(e.error||\"Input is not loaded\")",
+  "replace": "new Error(e.error||\"Ввод не загружен\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"Check the previous submission before editing\")",
+  "replace": "new Error(\"Проверьте предыдущую отправку перед редактированием\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"Review the saved input before sending\")",
+  "replace": "new Error(\"Проверьте сохранённый ввод перед отправкой\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"The input changed before submission\")",
+  "replace": "new Error(\"Ввод изменился до отправки\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"The input changed during submission\")",
+  "replace": "new Error(\"Ввод изменился во время отправки\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionComposerPersistence-*.js",
+  "find": "new Error(\"Input changed while preparing submission; review and send again\")",
+  "replace": "new Error(\"Ввод изменился при подготовке отправки; проверьте и отправьте снова\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "HistoryPanel-*.js",
+  "find": "new Error(\"Mixed history read snapshots\")",
+  "replace": "new Error(\"Смешанные снимки чтения истории\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "ProjectTree-*.js",
+  "find": "new Error(\"Mixed read snapshots in one list\")",
+  "replace": "new Error(\"Смешанные снимки чтения в одном списке\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "projectTreeWindow-*.js",
+  "find": "new Error(\"Mixed read snapshots in one list window\")",
+  "replace": "new Error(\"Смешанные снимки чтения в окне списка\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "projectTreeWindow-*.js",
+  "find": "new Error(\"List cursor did not advance\")",
+  "replace": "new Error(\"Курсор списка не продвинулся\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "ChatToolBody-*.js",
+  "find": "new Error(\"Tool changed or closed\")",
+  "replace": "new Error(\"Инструмент изменён или закрыт\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "ChatToolBody-*.js",
+  "find": "new Error(\"Invalid tool content\")",
+  "replace": "new Error(\"Некорректное содержимое инструмента\")",
+  "note": "residual literal",
+  "mode": "all"
+ },
+ {
+  "file": "nativeTranscriptHistory-*.js",
+  "find": "new Error(\"Native transcript paging is unavailable\")",
+  "replace": "new Error(\"Постраничный просмотр встроенной ленты недоступен\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "nativeTranscriptHistory-*.js",
+  "find": "new Error(\"Native transcript outline is unavailable\")",
+  "replace": "new Error(\"Структура встроенной ленты недоступна\")",
+  "note": "residual literal",
+  "mode": "all"
+ },
+ {
+  "file": "sessionExport-*.js",
+  "find": "new Error(\"Could not encode export image\")",
+  "replace": "new Error(\"Не удалось закодировать изображение экспорта\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExport-*.js",
+  "find": "new Error(\"Could not render export image\")",
+  "replace": "new Error(\"Не удалось отрисовать изображение экспорта\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExport-*.js",
+  "find": "new Error(\"Canvas is not available\")",
+  "replace": "new Error(\"Canvas недоступен\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExport-*.js",
+  "find": "new Error(\"Could not read export payload\")",
+  "replace": "new Error(\"Не удалось прочитать данные экспорта\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExport-*.js",
+  "find": "new Error(\"Export surface was not rendered\")",
+  "replace": "new Error(\"Область экспорта не отрисована\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "runtimeStateSync-*.js",
+  "find": "new Error(\"Runtime snapshot version conflict\")",
+  "replace": "new Error(\"Конфликт версий снимка состояния\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "turnSubmit-*.js",
+  "find": "new Error(\"Model application choice is unsupported by this host\")",
+  "replace": "new Error(\"Этот хост не поддерживает выбор применения модели\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "transcriptToolContent-*.js",
+  "find": "new Error(\"Ambiguous legacy tool reference\")",
+  "replace": "new Error(\"Неоднозначная ссылка на старый инструмент\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "transcriptToolContent-*.js",
+  "find": "new Error(\"Incomplete tool result content\")",
+  "replace": "new Error(\"Неполное содержимое результата инструмента\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExportOperation-*.js",
+  "find": "new Error(\"Export cursor did not advance\")",
+  "replace": "new Error(\"Курсор экспорта не продвинулся\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionExportOperation-*.js",
+  "find": "new Error(\"Incomplete export block stream\")",
+  "replace": "new Error(\"Неполный поток блоков экспорта\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "canonicalHistoryContent-*.js",
+  "find": "new Error(\"Transcript content did not advance\")",
+  "replace": "new Error(\"Содержимое ленты не продвинулось\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "transcriptSessionFollowerRuntime-*.js",
+  "find": "new Error(\"Active transcript content did not advance\")",
+  "replace": "new Error(\"Содержимое активной ленты не продвинулось\")",
+  "note": "residual literal"
+ },
+ {
+  "file": "sessionObservationDiagnostics-*.js",
+  "find": "\"Observations before this renderer started or after trace eviction are unavailable.\"",
+  "replace": "\"Наблюдения до запуска этого рендерера или после вытеснения трассировки недоступны.\"",
+  "note": "residual literal"
+ },
+ {
+  "file": "fileNavigationCommands-*.js",
+  "find": "new Error(\"Built-in browser is not ready\")",
+  "replace": "new Error(\"Встроенный браузер не готов\")",
+  "note": "residual literal",
+  "mode": "all"
+ },
+ {
+  "file": "fileNavigationCommands-*.js",
+  "find": "new DOMException(\"Browser preview was cancelled\",\"AbortError\")",
+  "replace": "new DOMException(\"Предпросмотр браузера отменён\",\"AbortError\")",
+  "note": "residual literal",
+  "mode": "all"
+ },
+ {
+  "file": "index-*.js",
+  "find": "new Error(\"Task session is unavailable\")",
+  "replace": "new Error(\"Сессия задачи недоступна\")",
+  "note": "residual literal",
+  "mode": "all"
+ },
+ {
+  "file": "SettingsPanelEntry-*.js",
+  "find": "\"Model settings were not saved.\"",
+  "replace": "\"Настройки модели не сохранены.\"",
+  "note": "residual literal (final sweep)"
+ },
+ {
+  "file": "WorkspacePanel-*.js",
+  "find": "children:\"No details available\"",
+  "replace": "children:\"Подробности недоступны\"",
+  "note": "residual literal (final sweep)",
+  "mode": "all"
+ },
+ {
+  "file": "TaskMonitorPanel-*.js",
+  "find": "title:\"Runtime process state\"",
+  "replace": "title:\"Состояние процесса среды выполнения\"",
+  "note": "residual literal (final sweep)"
+ },
+ {
+  "file": "transcriptToolContent-*.js",
+  "find": "new Error(\"Incomplete tool content\")",
+  "replace": "new Error(\"Неполное содержимое инструмента\")",
+  "note": "residual literal (final sweep)"
+ },
+ {
+  "file": "HeartbeatPanel-*.js",
+  "find": "new Error(\"Automation changed elsewhere\")",
+  "replace": "new Error(\"Автоматизация изменена в другом месте\")",
+  "note": "residual literal (final sweep)"
+ },
+ {
+  "file": "HeartbeatPanel-*.js",
+  "find": "new Error(\"Automation ID conflict\")",
+  "replace": "new Error(\"Конфликт идентификатора автоматизации\")",
+  "note": "residual literal (final sweep)"
+ },
+ {
+  "file": "attachmentSubmit-*.js",
+  "find": "new Error(\"File upload returned no attachment path\")",
+  "replace": "new Error(\"Загрузка файла не вернула путь к вложению\")",
+  "note": "residual literal (v1.39.11 sweep)"
+ },
+ {
+  "file": "attachmentSubmit-*.js",
+  "find": "throw new Error(`File upload failed (${o.status})`)",
+  "replace": "throw new Error(`Не удалось загрузить файл (${o.status})`)",
+  "note": "residual literal (v1.39.11 sweep)"
+ }
+]

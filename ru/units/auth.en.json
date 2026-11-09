@@ -1,0 +1,8 @@
+{
+ "missing": "This model connection needs an API key.",
+ "rejected": "The provider rejected this connection's credential.",
+ "unavailable": "Reasonix could not read the credential store.",
+ "configure": "Configure credential",
+ "retry": "Retry once",
+ "authorized": "One authentication retry is ready. Send your message when ready."
+}

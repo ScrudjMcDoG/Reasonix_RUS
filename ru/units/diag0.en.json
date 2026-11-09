@@ -1,0 +1,10 @@
+{
+ "start": "Frontend diagnostics",
+ "startHint": "Start recording a local frontend interaction timeline",
+ "recordingLabel": "Frontend diagnostics · on",
+ "readyLabel": "Frontend diagnostics · ready",
+ "export": "Export",
+ "stopExport": "Stop & export",
+ "mark": "Mark current issue",
+ "cancel": "Cancel recording"
+}

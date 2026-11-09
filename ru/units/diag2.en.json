@@ -1,0 +1,6 @@
+{
+ "title": "Credential diagnostics",
+ "probe": "Check write access",
+ "preview": "Preview repair",
+ "repair": "Repair credential access"
+}

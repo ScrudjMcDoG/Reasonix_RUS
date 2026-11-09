@@ -1,0 +1,21 @@
+[
+ "Inbox is paused",
+ "The inbox has reached its item limit",
+ "The inbox has reached its storage limit",
+ "This instruction is too large to add to the inbox",
+ "This inbox instruction no longer exists",
+ "This inbox instruction cannot be changed in its current state",
+ "This inbox was created by a newer version and is read-only",
+ "The inbox is closed",
+ "A blank instruction cannot be added",
+ "This instruction conflicts with an earlier submission",
+ "This session is read-only, so its inbox cannot be changed",
+ "The workspace is still starting. Try again shortly",
+ "The workspace failed to start",
+ "The inbox operation could not be completed",
+ "The turn ended before guidance could be applied. It will remain queued for the next turn",
+ "Cancel failed: {error}",
+ "The message was not sent. Refresh the session and try again",
+ "The image could not be read. Re-add it or try again",
+ "The session is switching. The message will be sent automatically."
+]
